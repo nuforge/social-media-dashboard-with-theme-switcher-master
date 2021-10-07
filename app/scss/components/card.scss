@@ -23,6 +23,11 @@
     border-radius: rem(5);
     text-align: center;
     flex: 1;
+    transition: background 150ms ease-in-out;
+
+    &:hover {
+        background: var(--dark-card-hover);
+    }
 
     &--facebook {
         border-top: rem(5) solid var(--facebook);
@@ -45,8 +50,8 @@
             background: linear-gradient(
                 225deg, 
                 var(--instagram-end), 
-                var(--instagram-middle), 
-                var(--instagram-start)
+                var(--instagram-middle) 50.91%, 
+                var(--instagram-start) 100%
                 );
         }
 
@@ -61,6 +66,11 @@
         align-items: center;
         height: rem(20);
         margin-bottom: rem(28);
+    }
+
+    &__subtitle {
+        font-size: rem(14);
+        font-weight: 700;
     }
 
     &__icon {
@@ -102,7 +112,7 @@
         }
 
         &--small {
-
+            font-size: rem(32);
         }
     }
 
