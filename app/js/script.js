@@ -10,6 +10,8 @@ const setColorMode = () => {
     } else if( localStorage.getItem('colorMode') == 'light'){
         lightButton.click();
         setLightMode(); 
+    } else {
+        checkMode();
     }
 }
 
@@ -37,7 +39,6 @@ const setLightMode = () => {
 }
 
 setColorMode();
-checkMode();
 checkModeChange();
 
 for (var i = 0 ; i < radioButtons.length; i++) {
@@ -49,6 +50,5 @@ for (var i = 0 ; i < radioButtons.length; i++) {
             localStorage.setItem('colorMode', 'light');
             setLightMode();
         }
-
     });
 }
